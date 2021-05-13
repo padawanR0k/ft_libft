@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/06 14:52:05 by gojung            #+#    #+#             */
-/*   Updated: 2021/05/13 13:44:16 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/13 14:58:50 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,6 @@ void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
-t_list				*ft_lstmap(t_list *lst,\
+t_list				*ft_lstmap(t_list *lst,
 								void *(*f)(void *), void (*del)(void *));
 #endif
