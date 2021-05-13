@@ -6,24 +6,33 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 18:04:55 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/11 15:30:49 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/13 17:00:36 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		get_arr_size(char const *s, char c)
+static int		get_mem(char const *s, char c)
 {
 	int size;
+	int	is_sep;
 
 	size = 0;
+	is_sep = 0;
 	while (*s)
 	{
 		if (*s == c)
+			s++;
+		else
+		{
 			size++;
-		s++;
+			while (*s && *s != c)
+				s++;
+			if (*s == '\0')
+				break ;
+		}
 	}
-	return (size + 2);
+	return (sizeof(char *) * (size + 1));
 }
 
 static char		**free_arr(char **arr, int idx)
@@ -44,7 +53,7 @@ char			**ft_split(char const *s, char c)
 
 	idx = 0;
 	prev_str = s;
-	if (s == 0 || !(arr = (char **)malloc(sizeof(char *) * get_arr_size(s, c))))
+	if (s == 0 || !(arr = (char **)malloc(get_mem(s, c))))
 		return (0);
 	while (*s)
 	{
