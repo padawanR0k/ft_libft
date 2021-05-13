@@ -6,29 +6,28 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 23:07:46 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/11 12:49:28 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/13 13:49:55 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 {
-	int	idx;
-	int	str_size;
+	unsigned int	idx;
+	unsigned int	str_size;
 
 	if (!(dest || src))
 		return (0);
-	if (size == 1)
-		*(dest) = '\0';
-	str_size = ft_strlen(src);
+	str_size = (unsigned int)ft_strlen((char *)src);
+	if (dstsize == 0)
+		return (str_size);
 	idx = 0;
-	while (idx < str_size && idx < (int)size - 1)
+	while (idx < str_size && idx < dstsize - 1)
 	{
-		*(dest + idx) = *(src + idx);
+		dest[idx] = src[idx];
 		idx++;
 	}
-	if (size)
-		*(dest + idx) = '\0';
+	dest[idx] = '\0';
 	return (str_size);
 }
