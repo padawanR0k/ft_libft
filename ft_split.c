@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 18:04:55 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/13 17:00:36 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 10:30:35 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 static int		get_mem(char const *s, char c)
 {
 	int size;
-	int	is_sep;
 
 	size = 0;
-	is_sep = 0;
 	while (*s)
 	{
 		if (*s == c)
