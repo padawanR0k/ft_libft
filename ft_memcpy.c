@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 10:38:03 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/11 11:43:22 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:04:28 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	new_src = (unsigned char *)src;
 	while (i < n)
 	{
-		*(new_dst + i) = *(new_src + i);
+		new_dst[i] = new_src[i];
 		i++;
 	}
 	return (dst);

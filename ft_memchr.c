@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:07:08 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/04 16:22:33 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:03:48 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	chr = c;
 	while (idx < n)
 	{
-		if (*(str + idx) == chr)
+		if (str[idx] == chr)
 			return (void *)(str + idx);
 		idx++;
 	}

@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 17:44:55 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/04 16:46:33 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:05:49 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ int	ft_strlen(char *str)
 	int size;
 
 	size = 0;
-	while (*(str + size))
+	while (str[size])
 		size++;
 	return (size);
 }

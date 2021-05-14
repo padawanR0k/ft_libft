@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 16:22:54 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/10 13:11:02 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:04:07 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	idx = 0;
 	while (idx < n)
 	{
-		diff = (*(c1 + idx) - *(c2 + idx));
+		diff = c1[idx] - c2[idx];
 		if (diff != 0)
 			return (diff);
 		idx++;

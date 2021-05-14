@@ -6,13 +6,13 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 12:38:18 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/14 10:37:06 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:23:24 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void		*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char		*new_dst;
 	const unsigned char	*new_src;
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	{
 		while (len--)
 		{
-			*(new_dst + i) = *(new_src + i);
+			new_dst[i] = new_src[i];
 			i++;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/07 14:20:20 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/10 10:53:58 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 17:59:57 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void			ft_lstclear(t_list **lst, void (*del)(void *))
 	{
 		next = (*lst)->next;
 		ft_lstdelone((*lst), del);
-		(*lst) = next;
+		*lst = next;
 	}
 	*lst = 0;
 }

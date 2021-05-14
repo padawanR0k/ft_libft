@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 14:42:02 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/10 16:39:59 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:44:07 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen((char *)s1);
 	s2_len = ft_strlen((char *)s2);
 	str_len = s1_len + s2_len;
-	str = (char *)malloc(sizeof(char) * str_len + 1);
+	str = (char *)malloc(sizeof(char) * (str_len + 1));
 	if (!str)
 		return (0);
 	else

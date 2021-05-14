@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/08 13:45:48 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/10 10:51:47 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 17:47:50 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ char		*ft_itoa(int n)
 	is_minus = n < 0 ? 1 : 0;
 	num = n < 0 ? -n : n;
 	len = get_len(num) + (is_minus ? 1 : 0);
-	str = (char *)malloc(sizeof(char) * len + 1);
+	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (0);
 	str[len] = 0;

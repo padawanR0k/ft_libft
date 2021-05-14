@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 14:48:48 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/11 15:53:24 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:26:42 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,9 @@ static size_t	get_back_idx(char const *s1, char const *set)
 		if (ft_strchr(set, (int)s1[len - 1]))
 			len--;
 		else
-			return (len - 1);
+			return (len);
 	}
-	return (len - 1);
+	return (len);
 }
 
 char			*ft_strtrim(char const *s1, char const *set)
@@ -57,12 +57,12 @@ char			*ft_strtrim(char const *s1, char const *set)
 	end_idx = get_back_idx(s1, set);
 	if (end_idx == 0 && start_idx > 0)
 		return (ft_strdup(""));
-	len = end_idx - start_idx + 1;
-	str = (char *)malloc(sizeof(char) * (len) + 1);
-	if (!str)
-		return (0);
+	len = end_idx - start_idx;
 	if (!len)
 		return (ft_strdup(""));
-	ft_strlcpy(str, (char *)s1 + start_idx, (end_idx - start_idx + 2));
+	str = (char *)malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (0);
+	ft_strlcpy(str, (char *)s1 + start_idx, len + 1);
 	return (str);
 }

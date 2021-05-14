@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/05 01:40:08 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/10 15:03:59 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:23:51 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,10 @@ static char	*find_niddle(const char *hays,
 
 	idx = 0;
 	needle_len = ft_strlen((char *)needle);
-	while (*hays && idx + needle_len <= len)
+	while (*hays)
 	{
+		if (idx + needle_len > len)
+			break ;
 		if (ft_memcmp(needle, hays, needle_len) == 0)
 			return (char *)hays;
 		hays++;

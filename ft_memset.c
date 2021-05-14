@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/03 12:10:02 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/04 13:58:23 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 18:38:35 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	while (i < len)
 	{
 		txt = (unsigned char)c;
-		*(dest + i) = txt;
+		dest[i] = txt;
 		i++;
 	}
 	return (b);

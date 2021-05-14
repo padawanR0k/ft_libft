@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 18:04:55 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/14 10:30:35 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/14 17:38:32 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static char		**free_arr(char **arr, int idx)
 		free(arr[idx]);
 		idx--;
 	}
+	free(arr);
 	return (0);
 }
 
@@ -62,8 +63,8 @@ char			**ft_split(char const *s, char c)
 			prev_str = s;
 			while (*s && *s != c)
 				s++;
-			if (!(arr[idx] = (char *)malloc(sizeof(char) * (s - prev_str + 2))))
-				return (free_arr(arr, idx));
+			if (!(arr[idx] = (char *)malloc(sizeof(char) * (s - prev_str + 1))))
+				return (free_arr(arr, idx - 1));
 			ft_strlcpy(arr[idx], (char *)prev_str, s - prev_str + 1);
 			idx++;
 		}
