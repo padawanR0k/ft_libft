@@ -6,16 +6,18 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 17:44:55 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/14 18:05:49 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/17 18:02:20 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
 	int size;
 
 	size = 0;
-	while (str[size])
+	while (s[size])
 		size++;
 	return (size);
 }

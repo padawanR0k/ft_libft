@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/04 17:10:00 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/05 23:29:37 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/17 19:25:48 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strchr(const char *s, int c)
 	while (*(s))
 	{
 		if (*(s) == chr)
-			return (char *)(s);
+			return ((char *)(s));
 		s++;
 	}
 	if (c == 0)
-		return (char *)(s);
+		return ((char *)(s));
 	return (0);
 }

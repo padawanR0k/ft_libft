@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 23:07:46 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/13 13:49:55 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/17 18:03:48 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dstsize)
 
 	if (!(dest || src))
 		return (0);
-	str_size = (unsigned int)ft_strlen((char *)src);
+	str_size = ft_strlen((char *)src);
 	if (dstsize == 0)
 		return (str_size);
 	idx = 0;

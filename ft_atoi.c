@@ -6,7 +6,7 @@
 /*   By: yurlee <yurlee@student.42.kr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/06 10:41:25 by yurlee            #+#    #+#             */
-/*   Updated: 2021/05/14 10:32:18 by yurlee           ###   ########.fr       */
+/*   Updated: 2021/05/17 19:24:38 by yurlee           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static	int		ft_issign(char c)
 
 int				ft_atoi(const char *str)
 {
-	long			n;
+	unsigned long	n;
 	int				sign;
 	int				size;
 
@@ -48,7 +48,5 @@ int				ft_atoi(const char *str)
 		size++;
 		str++;
 	}
-	if (size > 19)
-		return (sign == -1 ? 0 : -1);
 	return (sign == -1 ? -1 * n : n);
 }
