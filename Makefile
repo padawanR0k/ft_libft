@@ -48,15 +48,22 @@ BONUS_SRCS=\
 	ft_strncpy_bonus.c \
 
 NAME =	libft.a
+
 OBJS =	$(SRCS:.c=.o)
 BONUS_OBJS =	$(BONUS_SRCS:.c=.o)
+
+ifdef WITH_BONUS
+	OBJECTS = $(OBJS) $(BONUS_OBJS)
+else
+	OBJECTS = $(OBJS)
+endif
 
 all :	$(NAME)
 
 %.o :	%.c
 	gcc $(CFLAGS) -c $< -o $@
 
-$(NAME):	$(OBJS)
+$(NAME):	$(OBJECTS)
 	ar -cr $@ $^
 
 clean :
@@ -67,7 +74,7 @@ fclean :	clean
 
 re :	fclean all
 
-bonus:	$(OBJS) $(BONUS_OBJS)
-	ar -cr $(NAME) $^
+bonus:
+	make WITH_BONUS=1 all
 
 .PHONY:	bonus all clean fclean re
